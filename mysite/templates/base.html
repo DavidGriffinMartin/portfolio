@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>David Griffin Martin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  </head>
+  <body>
+    <header class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper black">
+          <ul>
+            <li>
+              <a href="/" class="left brand-logo"
+                >&nbsp;&nbsp;David Griffin Martin</a>
+            </li>
+          </ul>
+          <ul class="right">
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><span class="teal-text"></span><i class="material-icons right">X</i></a></li>
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'projects' %}">Projects</a></li>
+              <li><a href="{% url 'resume' %}">Resume</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container">{% block content %} {% endblock %}</main>
+    <footer class="page-footer black">
+      <div class="right">
+        <!-- All Rights Reserved, &copy; 2022 Family Day Planner &nbsp; -->
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    $(".dropdown-trigger").dropdown();
+  });
+</script>
