@@ -18,7 +18,7 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <header class="navbar-fixed">
@@ -27,11 +27,11 @@
           <ul>
             <li>
               <a href="/" class="left brand-logo"
-                >&nbsp;&nbsp;David Griffin Martin</a>
+                >&nbsp;&nbsp;DavidGriffinMartin.com</a>
             </li>
           </ul>
           <ul class="right">
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><span class="teal-text"></span><i class="material-icons right">X</i></a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons right">reorder</i></a></li>
             <ul id="dropdown1" class="dropdown-content">
               <li><a href="{% url 'about' %}">About</a></li>
               <li><a href="{% url 'projects' %}">Projects</a></li>
@@ -53,4 +53,7 @@
   $(document).ready(function () {
     $(".dropdown-trigger").dropdown();
   });
+  // $(document).ready(function(){
+  //   $('.pushpin').pushpin();
+  // });
 </script>
